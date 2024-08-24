@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    /* COLOR */
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --gray-purple:  hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+
+    /*FONTS*/
+    --font-family: "Work Sans", sans-serif;
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+*{
+  font: inherit;  
+  margin: 0;
+padding: 0;
+}
+
+img{
+    height: 1.5rem;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: var(--light-pink);
+    font-family: var(--font-family);
+
+}
+
+/* CONTAINER */
+
+.container{
+    
+    max-width: 45rem;
+    
+    background-color: var(--white);
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 15px;
+    word-spacing: 4px;
+    line-height: 1rem;
+   
+    
+}
+
+h1,h2{
+    color: var(--dark-purple);
+}
+
+h3{
+    color: var(--gray-purple);
+    font-weight: var(--fw-400);
+}
+
+h1{
+    font-weight: var(--fw-700);
+}
+
+h2{
+    font-weight: var(--fw-600);
+}
+
+/* TITLE */
+
+.title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2.7rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.title img{
+    height: 1.8rem;
+}
+
+/* QUESTION CONTAINER */
+
+
+.answer{
+    margin: 10px 0 10px 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+    max-height: 0;
+   
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+    align-items: center;
+}
+
+.question-container{
+    border-bottom: 2px solid var(--light-pink);
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    
+}
+
+
+
+/* BUTTONS */
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    min-width: 2rem;
+}
+
+#minus{
+    display: none;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 540px){
+    body{
+        background-image: url(/assets/images/background-pattern-mobile.svg);
+    }
+}
+
+
